@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Demonstration of Template System Directives</title>
-</head>
-<body>
-<h2>Books in Our Inventory</h2>
+{% extends "base.html" %}
+{% load bootstrap %}
+{% block title %}Display{% endblock %}
+
+{% block content %}
+<h2>Cities</h2>
 
 {# Display the availability information here #}
-<p>We have {{ books_list | length }} books.</p>
+<p>There is {{ books_list | length }} city in our database.</p>
 
 <ul>
     {% for item in books_list%}
@@ -24,5 +22,4 @@
 {% else %}
     <p>See you later!</p>
 {% endif %}
-</body>
-</html>
+{% endblock %}

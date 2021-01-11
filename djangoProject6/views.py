@@ -80,6 +80,11 @@ def plot_amb(request):
 
 #the first parameter is request, i.e., HttpRequest
 def display(request):
+    df = pd.read_csv("static/citydata.csv", header = 0)
+
+    print(df)
+
+
     books_list = [
         {"title": "Tesla Inventor of the Modern", "publisher": "Norton", "year": "2018"},
         {"title": "Kubeflow for Machine Learning", "publisher": "OReilly", "year": "2020"},
