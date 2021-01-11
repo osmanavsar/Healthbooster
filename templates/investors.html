@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}The List of All Investors{% endblock %}
+
+{% block content %}
+    <ol>
+    {% for investor in investors_list %}
+    <li> {{ investor.email }}, {{ investor.id }} </li>
+    {% endfor %}
+    </ol>
+{% endblock %}
