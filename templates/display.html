@@ -1,24 +1,24 @@
 {% extends "base.html" %}
 {% load bootstrap %}
-{% block title %}Display{% endblock %}
+{% block title %}All cities{% endblock %}
 
 {% block content %}
 <h2>Cities</h2>
 
 {# Display the availability information here #}
-<p>There is {{ books_list | length }} city in our database.</p>
+<p>There is {{ city_list | length }} city in our database.</p>
 
 <ul>
-    {% for item in books_list%}
-        <li>Title: {{ item.title}},
-            Publisher: {{ item.publisher }},
-            Publication year: {{ item.year}}
+    {% for city in city_list%}
+        <li>Name: {{ city.name}},
+            Region: {{ city.region }},
+            Population: {{ city.population}}
         </li>
     {% endfor %}
 </ul>
 
 {% if flag %}
-    <p>Thank you for visiting our page.</p>
+    <p>Thank you for visiting Healthbooster.</p>
 {% else %}
     <p>See you later!</p>
 {% endif %}

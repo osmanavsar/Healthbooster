@@ -16,17 +16,27 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from djangoProject6.views import display, home, plot_dis, plot_amb, plot_mr, plot_her, plot_mam, plot_ul, plot_poph
-from djangoProject6.views import plot_bed, plot_int, plot_spe
-from healthbooster.views import add_investor, all_authors, author_search
+from djangoProject6.views import plot_bed, plot_int, plot_spe, plot_eko ,plot_expu , plot_pub
+from healthbooster.views import add_person, all_authors, author_search
 from healthbooster.views import search_form, search
+from django.conf import settings
+from django.conf.urls.static import static
+from . import views, settings
+from django.contrib.staticfiles.urls import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
+
 
 urlpatterns = [
     path('', home),
     path('plot_dis/', plot_dis),
     path('plot_poph/', plot_poph),
+    path('plot_pub/', plot_pub),
+    path('plot_expu/', plot_expu),
     path('plot_amb/', plot_amb),
     path('plot_mr/',plot_mr),
     path('plot_her/',plot_her),
+    path('plot_eko/',plot_eko),
     path('plot_mam/',plot_mam),
     path('plot_ul/',plot_ul),
     path('plot_bed/',plot_bed),
@@ -34,7 +44,7 @@ urlpatterns = [
     path('plot_int/',plot_int),
     path('admin/', admin.site.urls),
     path('display/', display),
-    path('add_investor/', add_investor),
+    path('add_person/', add_person),
     path('authors/', all_authors),
     path('author_search/', author_search),
     path('search_form/', search_form),

@@ -6,17 +6,17 @@
         <p></p>
         <p>You searched for: <strong>{{ query }}</strong></p>
 
-        {% if books %}
-            <p>Found {{ books|length }} book{{ books|pluralize }}.</p>
+        {% if cities %}
+            <p>Found {{ cities|length }} book{{ cities|pluralize }}.</p>
             <ul class="list-group">
-                {% for book in books %}
+                {% for city in cities%}
                     <li class="list-group-item list-group-item-info">
-                        {{ book.title }}
+                        {{ city.name}}
                     </li>
                 {% endfor %}
             </ul>
         {% else %}
-            <p>No books matched your search criteria.</p>
+            <p>No city matched your search criteria.</p>
         {% endif %}
     </div>
 

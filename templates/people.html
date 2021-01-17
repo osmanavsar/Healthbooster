@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}The List of All People{% endblock %}
+
+{% block content %}
+    <ol>
+    {% for person in person_list %}
+    <li> {{ person.email }}, {{ person.id }} </li>
+    {% endfor %}
+    </ol>
+{% endblock %}
