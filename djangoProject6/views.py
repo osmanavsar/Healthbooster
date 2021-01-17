@@ -106,9 +106,9 @@ def display(request):
 
     city_list = [
         {"name": "Adana", "region": "Mediterranean", "population": "2,237,940"},
-        {"name": "Adıyaman", "region": "Southeast", "population": "626,465"},
+        {"name": "Adıyaman", "region": "Southeast Anatolia", "population": "626,465"},
         {"name": "Afyonkarahisar", "region": "Aegean", "population": "729,483"},
-        {"name": "Ağrı", "region": "East", "population": "536,199"}
+        {"name": "Ağrı", "region": "East Anatolia", "population": "536,199"}
     ]
 
     flag = True
