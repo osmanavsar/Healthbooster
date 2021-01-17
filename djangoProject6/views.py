@@ -105,10 +105,10 @@ def display(request):
     df.info(verbose=True)
 
     city_list = [
-        {"name": "Adana", "region": "Akdeniz", "population": "2,237,940"},
-        {"name": "Adıyaman", "region": "Güneydoğu", "population": "626,465"},
-        {"name": "Afyonkarahisar", "region": "Ege", "population": "729,483"},
-        {"name": "Ağrı", "region": "Doğu", "population": "536,199"}
+        {"name": "Adana", "region": "Mediterranean", "population": "2,237,940"},
+        {"name": "Adıyaman", "region": "Southeast", "population": "626,465"},
+        {"name": "Afyonkarahisar", "region": "Aegean", "population": "729,483"},
+        {"name": "Ağrı", "region": "East", "population": "536,199"}
     ]
 
     flag = True
