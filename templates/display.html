@@ -10,16 +10,19 @@
 
 <ul>
     {% for city in city_list%}
-        <li>Name: {{ city.name}},
-            Region: {{ city.region }},
-            Population: {{ city.population}}
+        <li>Name: {{ city.name}}/
+            Region: {{ city.region }}/
+            Population: {{ city.population}}/
+            Number of people per hospital : {{ city.Hospital }}/
+            Number of bed per ten thousand people: {{ city.Bed}}/
+            Number of ambulance per one million people: {{ city.Ambulance}}
         </li>
     {% endfor %}
 </ul>
 
 {% if flag %}
-    <p>Thank you for visiting Healthbooster.</p>
+    <h1>Thank you for visiting Healthbooster.</h1>
 {% else %}
-    <p>See you later!</p>
+    <h1>See you later!</h1>
 {% endif %}
 {% endblock %}

@@ -7,7 +7,7 @@
         <p>You searched for: <strong>{{ query }}</strong></p>
 
         {% if cities %}
-            <p>Found {{ cities|length }} book{{ cities|pluralize }}.</p>
+            <p>Found {{ cities|length }} city{{ cities|pluralize }}.</p>
             <ul class="list-group">
                 {% for city in cities%}
                     <li class="list-group-item list-group-item-info">

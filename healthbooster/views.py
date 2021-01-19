@@ -15,12 +15,12 @@ def add_person(request):
         form = PersonForm()
     return render(request, 'add_person.html', {'form': form})
 
-def all_authors(request):
-    investors_list = Person.objects.all()
-    return render(request, "people.html", {'investors_list': investors_list})
+def all_people(request):
+    people_list = Person.objects.all()
+    return render(request, "people.html", {'people_list': people_list})
 
-def author_search(request):
-    result_set = Person.objects.filter(email__contains='boun.edu.tr', last_name__contains= 'G')
+def people_search(request):
+    result_set = Person.objects.filter(first_name__contains='a').filter(last_name__contains='a')
     return HttpResponse(result_set)
 
 def search_form(request):
@@ -34,8 +34,8 @@ def search(request):
         if len(q) > 20:
             errors.append('Please enter at most 20 characters.')
         else:
-            books = City.objects.filter(title__icontains=q)
-            return render(request, 'search_results.html', {'books': books, 'query': q})
+            cities = City.objects.filter(name__icontains=q)
+            return render(request, 'search_results.html', {'cities': cities, 'query': q})
     else:
         errors.append('Enter a city.')
 

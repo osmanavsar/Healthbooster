@@ -12,3 +12,7 @@ class City(models.Model):
     name = models.CharField(max_length=50)
     region = models.CharField(max_length=50)
     population = models.CharField(max_length=50)
+    Hospital = models.CharField(max_length=50)
+    Bed = models.CharField(max_length=50)
+    Ambulance = models.CharField(max_length=50)
+
