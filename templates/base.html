@@ -17,7 +17,14 @@
 
     <ul class="nav navbar-nav">
       <li class="active"><a href="/">Healthbooster</a></li>
-      <li><a href="/add_person">Add Person</a></li>
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="people/">People
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/add_person">Add Person</a></li>
+          <li><a href="/people">All People</a></li>
+        </ul>
+
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="hospital/">Hospital
         <span class="caret"></span></a>
@@ -49,6 +56,13 @@
         <li><a href="/plot_amb">Ambulance</a></li>
         <li><a href="/plot_dis">Dental Unit</a></li>
         <li><a href="/display">All cities</a></li>
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="cities/">Cities
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/add_city">Add City</a></li>
+          <li><a href="/cities">All Cities</a></li>
+        </ul>
         <li><a href="/search_form">Search City</a></li>
 
     </ul>

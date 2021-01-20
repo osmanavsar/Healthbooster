@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}The list of cities{% endblock %}
+
+{% block content %}
+    <ol>
+    {% for city in city_list %}
+    <li> name :{{ city.name }} region: {{ city.region}} population: {{ city.population}} </li>
+    {% endfor %}
+    </ol>
+{% endblock %}

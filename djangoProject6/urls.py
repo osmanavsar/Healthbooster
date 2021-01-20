@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from djangoProject6.views import display, home, plot_dis, plot_amb, plot_mr, plot_her, plot_mam, plot_ul, plot_poph
 from djangoProject6.views import plot_bed, plot_int, plot_spe, plot_eko ,plot_expu , plot_pub
-from healthbooster.views import add_person, all_people, people_search
+from healthbooster.views import add_person, all_people, people_search, add_city, all_cities
 from healthbooster.views import search_form, search
 from django.conf import settings
 from django.conf.urls.static import static
@@ -45,6 +45,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('display/', display),
     path('add_person/', add_person),
+    path('add_city/', add_city),
+    path('cities/', all_cities),
     path('people/', all_people),
     path('people_search/', people_search),
     path('search_form/', search_form),
