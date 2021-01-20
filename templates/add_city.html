@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load bootstrap %}
+{% block title %}Add City{% endblock %}
+
+{% block content %}
+
+    {% if form.errors %}
+        <p style="color: red;">
+            Please correct the error{{ form.errors|pluralize }} below.
+        </p>
+    {% endif %}
+
+    <div class="container" style="width: 35%">
+        <p></p>
+        <h1>Add City</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form | bootstrap }}
+            <input class="btn btn-primary" type="submit" value="Submit">
+        </form>
+    </div>
+
+{% endblock %}
